@@ -1,0 +1,194 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="./style.css" />
+    <link
+      rel="stylesheet"
+      href=" https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+    />
+
+    <title>ToQuiSoft</title>
+  </head>
+  <body onload="tiempo()">
+    <div class="container">
+      <nav class="navbar navbar-expand-lg bg-light">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">ToQuiSoft</a>
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarText"
+            aria-controls="navbarText"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+          >
+            <span class="navbar-toggler-icon"></span>
+          </button>
+          <div class="collapse navbar-collapse" id="navbarText">
+            <ul class="navbar-nav me-auto mb-2 mb-lg-0">
+              <li class="nav-item">
+                <a
+                  class="nav-link active"
+                  aria-current="page" style="text-decoration:line-through;"
+                  href="sobreNosotros.html"
+                  >SOBRE NOSOTROS</a
+                >
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" style="text-decoration:line-through;" href="servicios.html">SERVICIOS</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="contactenos.html">CONTACTENOS</a>
+              </li>
+              <h3 id="hora"></h3>
+            </ul>
+           
+            <span class="navbar-text"> Siempre innovando... </span>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <div class="container">
+      <div class="flex-container">
+       
+       
+        <div class="flex-items">
+          <br />
+          <hr />
+          <h1 class="letra1">
+            ToQuiSoft, dedicados ala experiencia , confort del Usuario, sistemas
+            realizados con calidad, amigables y confiables...
+          </h1>
+        </div>
+         <div class="flex-items">...</div>
+        <div class="flex-items">
+            <img src="logo.jpg" alt="logo TOQUISOFT" />
+          </div>
+        <hr />
+        <hr />
+        <br />
+      </div>
+    </div>
+    <div class="container p-2">
+      <h1>Tipos de Desarrollo</h1>
+      <div
+        id="carouselExampleControls"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <h2>Desarrollo web.</h2>
+            <img src="./d1.jpg" class="d-block w-100" alt=".Desarrollo web." />
+          </div>
+          <div class="carousel-item">
+            <h2>Desarrollo Movil.</h2>
+            <img
+              src="./d3.png"
+              class="d-block w-100"
+              alt=".Desarrollo Movil."
+            />
+          </div>
+          <div class="carousel-item">
+            <h2>Desarrollo Sistemas.</h2>
+            <img
+              src="./d4.jpg"
+              class="d-block w-100"
+              alt=".Desarrollo Sistemas."
+            />
+          </div>
+
+          <div class="carousel-item">
+            <h2>Desarrollo Ecomerce</h2>
+            <img
+              src="./d5.png"
+              class="d-block w-100"
+              alt=".Desarrollo Ecomerce"
+            />
+          </div>
+          <div class="carousel-item">
+            <h2>Desarrollo Sistemas bancarios,control,etc.</h2>
+            <img
+              src="./d6.png"
+              class="d-block w-100"
+              alt=".Desarrollo Sistemas de inventarios, bancarios,control,etc."
+            />
+          </div>
+        </div>
+        <button
+          class="carousel-control-prev"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="prev"
+        >
+          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Previous</span>
+        </button>
+        <button
+          class="carousel-control-next"
+          type="button"
+          data-bs-target="#carouselExampleControls"
+          data-bs-slide="next"
+        >
+          <span class="carousel-control-next-icon" aria-hidden="true"></span>
+          <span class="visually-hidden">Next</span>
+        </button>
+      </div>
+    </div>
+
+
+
+    <footer>
+      <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-md-6">
+                <h6 class="text-muted lead">CONTACTO:</h6>
+                <h6 class="text-muted">
+                La Paz<br>
+                Bolivia<br>
+                Teléfonos: 7252252 – 2223344.<br>
+                </h6>
+            </div>
+            <div class="col-xs-12 col-md-6">
+            <div class="pull-right">
+            <h6 class="text-muted lead">ENCUENTRANOS EN LAS REDES</h6>
+                  <div class="redes-footer">
+                      <a href="./contactenos.html">Contactos</a>
+                  </div>
+            </div>
+            <div class="row"> <p class="text-muted small text-right">ToQuiSoft @2022.<br> Todos los derechos reservados.</p></div>
+        </div>
+      </div>  
+    </div>
+    </footer>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script>
+      
+function tiempo(){
+    momentoActual = new Date()
+    hora = momentoActual.getHours()
+    minuto = momentoActual.getMinutes()
+    segundo = momentoActual.getSeconds()
+
+    horaImprimible = zeroFill(hora,2)+ " : " + zeroFill(minuto,2) + " : " + zeroFill(segundo,2)
+
+    document.getElementById("hora").innerHTML = horaImprimible
+    setTimeout("tiempo()",1000)
+}
+function zeroFill( number, width )
+{
+  width -= number.toString().length;
+  if ( width > 0 )
+  {
+    return new Array( width + (/\./.test( number ) ? 2 : 1) ).join( '0' ) + number;
+  }
+  return number + ""; // siempre devuelve tipo cadena
+}
+    </script>
+  </body>
+</html>
